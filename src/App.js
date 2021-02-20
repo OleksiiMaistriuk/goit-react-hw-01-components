@@ -6,11 +6,12 @@ import TransactionHistory from './TransactionHistory/index.js';
 
 import user from './SocialNetworkProfile/user.json';
 import statisticalData from './StatisticSection/statistical-data.json';
+import friends from './FriendList/friends.json';
 
 const App = () => {
   return (
     <div>
-      <FriendList />
+      <FriendList friends={friends} />
       <Profile
         name={user.name}
         tag={user.tag}
