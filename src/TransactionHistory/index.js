@@ -3,7 +3,7 @@ import React from 'react';
 
 const TransactionHistory = () => {
   return (
-    <table class="transaction-history">
+    <table className="transaction-history">
       <thead>
         <tr>
           <th>Type</th>
