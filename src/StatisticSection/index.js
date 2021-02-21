@@ -1,5 +1,5 @@
 import React from 'react';
-// import ProtoTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import StaticList from './StaticList';
 
 const Statistic = ({ stats }) => (
@@ -13,4 +13,18 @@ const Statistic = ({ stats }) => (
   </section>
 );
 
+Statistic.defaultProps = {
+  title: '',
+};
+
+Statistic.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
 export default Statistic;
