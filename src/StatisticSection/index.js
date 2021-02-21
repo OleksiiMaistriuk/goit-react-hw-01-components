@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StaticList from './StaticList';
+import styles from './Statistics.module.css';
 
 const Statistic = ({ stats }) => (
-  <section className="statistics">
-    <ul className="stat-list">
-      <h2 className="title">Upload stats</h2>
+  <section className={styles.statistics}>
+    <h2 className={styles.title}>Upload stats</h2>
+    <ul className={styles.statList}>
       {stats.map(({ id, label, percentage }) => (
         <StaticList key={id} label={label} percentage={percentage} />
       ))}

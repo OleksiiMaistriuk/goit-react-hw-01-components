@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Table from './table';
-import 'modern-normalize/modern-normalize.css';
+
+import styles from './TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => (
-  <table className="transaction-history">
-    <thead>
+  <table className={styles.transactionHistory}>
+    <thead className={styles.head}>
       <tr>
-        <th>Type</th>
-        <th>Amount</th>
+        <th className={styles.type}>Type</th>
+        <th className={styles.amount}>Amount</th>
         <th>Currency</th>
       </tr>
     </thead>
