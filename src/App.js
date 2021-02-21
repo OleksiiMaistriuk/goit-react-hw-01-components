@@ -7,6 +7,7 @@ import TransactionHistory from './TransactionHistory/index.js';
 import user from './SocialNetworkProfile/user.json';
 import statisticalData from './StatisticSection/statistical-data.json';
 import friends from './FriendList/friends.json';
+import transactions from './TransactionHistory/transactions.json';
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
       />
       <Statistic stats={statisticalData} />
 
-      <TransactionHistory />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
